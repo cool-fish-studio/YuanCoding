@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <script src="lib/codemirror.js"></script>
+        <link rel='stylesheet' href='/css/style.css' />
+        <link rel="stylesheet" href="/lib/codemirror.css">
+
+
+        <link rel="stylesheet" href="/theme/eclipse.css">
+        <link rel="stylesheet" href="/theme/base16-light.css">
+        <link rel="stylesheet" href="/theme/tomorrow-night-eighties.css">
+
+        <script src="mode/xml/xml.js"></script>
+        <script src="mode/javascript/javascript.js"></script>
+        <script src="mode/css/css.js"></script>
+        <script src="mode/htmlmixed/htmlmixed.js"></script>
+        <style type=text/css>
+        .CodeMirror {
+            float: left;
+            width: 50%;
+            height: 640px;
+        }
+        iframe {
+            width: 49%;
+            float: left;
+            height: 640px;
+            border: 0px;
+            border-left: 1px solid black;
+        }
+        </style>
+        <script type="text/javascript">
+            window.onload = function () {
+                var delay;
+                var codePanel = document.getElementById('editor');
+                var editor = CodeMirror.fromTextArea(codePanel, {
+                    // mode: "text/javascript",
+                    mode: 'text/html',
+                    theme: 'tomorrow-night-eighties',
+                    indentUnit: 4,
+                    lineNumbers: true
+                });
+                editor.setOption('lineWrapping', true);//自动换行
+                //监听事件
+                editor.on('change', function() {
+                    clearTimeout(delay);
+                    delay = setTimeout(updatePreview, 300);
+                });
+
+                function updatePreview() {
+                    var previewFrame = document.getElementById('preview');
+                    var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+                    preview.open();
+                    preview.write(editor.getValue());
+                    preview.close();
+                }
+                setTimeout(updatePreview, 300);
+            };
+        </script>
+    </head>
+    <body>
+        <textarea id="editor" name="editor">
+<!DOCTYPE>
+<html>
+    <head>
+        <title>猿代码</title>
+        <script type="text/javascript">
+            function main () {
+                document.write('hello world!');
+            }
+            main();
+        </script>
+    </head>
+    <body>
+    </body>
+</html></textarea>
+    <iframe id="preview"></iframe>
+    </body>
+</html>

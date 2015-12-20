@@ -11,49 +11,53 @@ input,button{outline:none;}
 .clearfix:before,.clearfix:after{content:''; display:table;}.clearfix:after{clear:both;}.clearfix{*zoom:1;}
 .none{display:none;}
 .block{display:block;}
-/* Color */
-@-webkit-keyframes hue {
-    from {
-        -webkit-filter: hue-rotate(0deg);
-    }
-
-    to {
-        -webkit-filter: hue-rotate(-360deg);
-    }
-}
-.hue{-webkit-animation: hue 60s infinite linear;}
 /***** headerMenu *****/
-.header{height:48px;position:relative;-webkit-box-shadow:0 1px 3px rgba(0,0,0,.2);-moz-box-shadow:0 1px 3px rgba(0,0,0,.2);box-shadow:0 1px 3px rgba(0,0,0,.2);background-color:#3498db;}
+.header{height:48px;position:relative;-webkit-box-shadow:0 1px 3px rgba(0,0,0,.2);-moz-box-shadow:0 1px 3px rgba(0,0,0,.2);box-shadow:0 1px 3px rgba(0,0,0,.2);background-color:#333;z-index: 5;}
 .header .logo{position:absolute;z-index:1;top:0;left:0;color:#fff;display:inline-block;width:100px;height:48px;line-height:48px;margin-left:20px;text-align:center}
 .header .headerMenu{display:inline-block;width:100%;height:48px;line-height:48px;text-align:right}
 .header .headerMenu .login{font-size:14px;color:#fff;width:60px;margin-right:10px;border:1px solid #fff;text-align:center;padding:5px 10px;line-height:26px;height:26px}
 /***** footer *****/
-.footer{position:relative;z-index:998;padding:60px;background-color:#3498db;text-align:center;color:#fff;}
+.footer{position:relative;z-index:998;padding:60px;background-color:#333;text-align:center;color:#fff;}
 /***** index *****/
 .indexContent{width:980px;margin:0 auto;text-align:left}
-.indexContent h2{text-align:center;font-size:30px;line-height:100px;font-weight:400;color:#3498db}
-.indexContent .indexMenu>a{display:block;margin-bottom:30px;position:relative;float:left;margin-left:20px;width:300px;height:150px;text-align:center;border:1px solid #3498db;}
+.indexContent h2{text-align:center;font-size:30px;line-height:100px;font-weight:400;color:#333}
+.indexContent .indexMenu>a{display:block;margin-bottom:30px;position:relative;float:left;margin-left:20px;width:300px;height:150px;text-align:center;border:1px solid #333;}
 .indexContent .indexMenu>a:hover{-moz-box-shodow:inset 0 1px 0 rgba(255,255,255,.2),0 3px 6px rgba(0,0,0,.2);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 3px 6px rgba(0,0,0,.2);box-shadow:inset 0 1px 0 #rgba(255,255,255,.2),0 3px 6px rgba(0,0,0,.2)}
 .indexContent .indexMenu>a>dl{width:100%;height:100%}
-.indexContent .indexMenu>a>dl>dt{margin-top:12px;font-size:36px;line-height:108px;color:#3498db}
-.indexContent .indexMenu>a>dl>dd.description{color:#3498db}
+.indexContent .indexMenu>a>dl>dt{margin-top:12px;font-size:36px;line-height:108px;color:#333}
+.indexContent .indexMenu>a>dl>dd.description{color:#333}
 
 .indexContent .indexMenu>a>dl .ribbonWrapper{width:80px;height:80px;overflow:hidden;position:absolute;top:-1px;right:-1px}
-.indexContent .indexMenu>a>dl .ribbonWrapper .ribbon{color:#333;text-align:center;text-shadow:rgba(0,0,0,.9) 0 0 2px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);position:relative;padding:7px 0;left:-3px;top:12px;width:120px;background-color:#3498db;color:#fff;font-size:16px}
+.indexContent .indexMenu>a>dl .ribbonWrapper .ribbon{color:#333;text-align:center;text-shadow:rgba(0,0,0,.9) 0 0 2px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);position:relative;padding:7px 0;left:-3px;top:12px;width:120px;background-color:#333;color:#fff;font-size:16px}
 
-.contentPanel{position:relative;margin:0 13px 30px 20px;padding:0 20px 20px 20px;border:1px solid #3498db}
+.contentPanel{position:relative;margin:0 13px 30px 20px;padding:0 20px 20px 20px;border:1px solid #333}
 .contentPanel .userOperate{margin-top:20px;width:550px;float:left}
-.contentPanel .userOperate li{padding-left:20px;line-height:48px;height:48px;border-bottom:1px solid #3498db}
+.contentPanel .userOperate li{padding-left:20px;line-height:48px;height:48px;border-bottom:1px solid #333}
 .contentPanel .userOperate li .userOperate_time{float:right;color:#aaa;font-size:12px}
-.contentPanel .userOperate li a{color:#3498db}
+.contentPanel .userOperate li a{color:#333;font-weight: bold;}
 .contentPanel .userOperate li a:hover{text-decoration:underline}
-.contentPanel .help{float:right;padding:10px 20px;margin-top:20px;width:290px;line-height:36px;background-color:#3498db}
+.contentPanel .help{float:right;padding:10px 20px;margin-top:20px;width:290px;line-height:36px;background-color:#333}
 .contentPanel .help h3{color:#fff;border-bottom:1px solid #fff}
 .contentPanel .help a{color:#fff}
-.contentPanel .userOperate #getMore{float:right;margin-top:10px;color:#3498db}
+.contentPanel .help a:hover{text-decoration:underline}
+.contentPanel .userOperate #getMore{float:right;margin-top:10px;color:#333}
 /***** Edit *****/
-
-
-/***** Preview *****/
-
-
+.editorMenu{background-color:#ccc;padding-left:1em;position:relative;z-index:4}
+.editorMenu a{padding:.3em .8em;display:inline-block}
+.editorMenu a:hover{background-color:#333;color:#fff}
+.CodeMirror{float:left;height:640px}
+#preview{float:left;height:640px;border:0}
+.alertCover{position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.5);z-index:999;display:none}
+.alertPanel{position:absolute;top:50%;left:50%;width:30em;height:13em;background-color:#fff;margin-top:-6.5em;margin-left:-15em;border-radius:5px;box-shadow:1px 1px 3px #000}
+.alertTitle{height:1.8em;line-height:1.8em;font-size:16px;margin:.5em 1em;border-bottom:1px solid #888}
+.alertTitle span{padding-left:1em}
+.alertContent{padding:1.2em 1em .8em 1em;text-align:center}
+.alertText{width:200px;padding:7px 12px;background-color:#FFF;border:1px solid #E3E3E3;border-radius:4px;color:#565656;font-size:14px}
+.alertBtn{margin-top:2em}
+.alertBtn .btn{padding:.5em 1.3em;border-radius:3px;background-color:#eee;color:#555;display:inline-block}
+.alertBtn .btn:hover{background-color:#ddd}
+/***** scroll *****/
+#scroll{width:10px;cursor:col-resize;text-align:center;z-index:2;position:absolute;top:0;bottom:0}
+#scroll span{width:0;border-left:1px solid #e5e5e5;display:inline-block;background:#e5e5e5;position:absolute;top:0;bottom:0}
+#scroll:hover span{border-left:1px dashed #3a8bfa}
+#editor-drag-cover{position:absolute;z-index:1;width:100%;height:100%;top:0;display:none}

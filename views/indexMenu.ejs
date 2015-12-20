@@ -2,12 +2,12 @@
 <div class="indexMenu clearfix">
     <%
     var menuObj = [
-        { name: '面对面', description: '邀请别人同步观看你如何写web前端代码', state: false, url: 'javascript:;' },
-        { name: '编辑器', description: '在线编辑、实时预览你的web前端代码', state: false, url: 'javascript:;' },
-        { name: '记录仪', description: '观看别人当时如何写web前端代码', state: false, url: 'javascript:;' },
-        { name: '广场', description: '展示最新最热的优质代码', state: false, url: 'javascript:;' },
-        { name: '笔记', description: '记录学习的过程', state: false, url: 'javascript:;' },
-        { name: '插件', description: '自由扩展、自我增强、打造属于自己的编辑器', state: false, url: 'javascript:;' },
+        //{ name: '面对面', description: '邀请别人同步观看你如何写web前端代码', state: false, url: 'javascript:;' },
+        { name: '编辑器', description: '在线编辑、实时预览你的web前端代码', state: true, url: '/code' },
+        //{ name: '记录仪', description: '观看别人当时如何写web前端代码', state: false, url: 'javascript:;' },
+        //{ name: '广场', description: '展示最新最热的优质代码', state: false, url: 'javascript:;' },
+        //{ name: '笔记', description: '记录学习的过程', state: false, url: 'javascript:;' },
+        //{ name: '插件', description: '自由扩展、自我增强、打造属于自己的编辑器', state: false, url: 'javascript:;' },
         ];
     %>
     <% menuObj.forEach(function (menu) { %>
@@ -15,9 +15,11 @@
         <dl class="dl">
             <dt><%- menu.name %></dt>
             <dd class="description"><%- menu.description %></dd>
+            <% if (!menu.state) { %>
             <dd class="ribbonWrapper">
                 <div class="ribbon">开发中</div>
-            </dd>     
+            </dd>
+            <% } %>
         </dl>
     </a>
     <% }); %>

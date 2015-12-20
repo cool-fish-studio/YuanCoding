@@ -1,15 +1,19 @@
 <div class="contentPanel clearfix">
     <div class="userOperate">
         <ul>
-            <% for (var i = 0; i < 10; i++) { %>
+            <% var statusObj = {'create': '发布', 'update': '更新', 'fork': '拉取'}; %>
+            <% records.forEach(function (record) { %>
+            <% console.log(record) %>
             <li>
-                <span class="userOperate_time">14分钟前</span>
-                <a class="dy_user">Yves</a>
-                发布了代码 (<a href="javascript:;" target="_blank">程序员浪漫表白特效</a>)
+                <span class="userOperate_time"><%- record.created %></span>
+                <a class="dy_user"><%- record.userName %></a>
+                <%- statusObj[record.status] %>了代码 (<a href="/code/<%- record.codeID %>" target="_blank"><%- record.title %></a>)
             </li>
-            <% } %>
+            <% }); %>
         </ul>
+        <% if (false && records.length > 10) { %>
         <a href="javascript:;" id="getMore" style="">点击加载更多...</a>
+        <% } %>
     </div>
     <% include help %>
 </div>

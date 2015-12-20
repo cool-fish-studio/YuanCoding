@@ -27,3 +27,6 @@ build/Release
 node_modules
 
 config/config_current.js
+
+*/.DS_Store
+.DS_Store

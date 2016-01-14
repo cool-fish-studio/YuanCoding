@@ -3,7 +3,6 @@
         <ul>
             <% var statusObj = {'create': '发布', 'update': '更新', 'fork': '拉取'}; %>
             <% records.forEach(function (record) { %>
-            <% console.log(record) %>
             <li>
                 <span class="userOperate_time"><%- record.created %></span>
                 <a class="dy_user"><%- record.userName %></a>

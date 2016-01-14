@@ -6,6 +6,7 @@ module.exports = {
             {type: 'console'}
         ]
     },
+    NODEENV: 'testing',
     EXPRESS: {
         PORT: process.env.port || '****',
     },

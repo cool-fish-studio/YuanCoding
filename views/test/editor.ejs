@@ -27,9 +27,9 @@
         <% include editorMenu %>
         <input type="hidden" id="codeName" value="<%- data.title || '' %>">
         <% if (!data.codeText) { %>
-        <textarea id="editor" name="editor"><% include demo %></textarea>
+        <textarea id="editor" name="editor" class="none"><% include demo %></textarea>
         <% } else { %>
-        <textarea id="editor" name="editor"><%- data.codeText %></textarea>
+        <textarea id="editor" name="editor" class="none"><%- data.codeText %></textarea>
         <% } %>
         <iframe id="preview"></iframe>
         <div id="scroll"><span></span></div>

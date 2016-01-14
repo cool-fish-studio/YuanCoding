@@ -1,0 +1,23 @@
+<div class="header">
+    <a href="/" class="logo">
+        <h3>猿Coding</h3>
+    </a>
+    <div class="header-menu-list fl">
+        <ul class="header-menu-item clearfix">
+            <li class="fl"><a href="###">广场</a></li>
+            <li class="fl"><a href="###">专题</a></li>
+            <li class="fl"><a href="###">直播</a></li>
+        </ul>
+    </div>
+    <div class="headerMenu">
+        <% if (locals.user ) { %>
+        <a id="header-avator" class="header-avator">
+            <img src=<%- locals.user.avatarUrl %> width="40" height="40">
+        </a>
+        <% } else { %>
+        <a href="/auth/by/github" class="login">
+            Github登录
+        </a>
+        <% } %>
+    </div>
+</div>

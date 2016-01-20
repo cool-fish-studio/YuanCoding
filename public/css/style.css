@@ -267,7 +267,7 @@ input,button{outline:none;}
 .editorMenu a{padding:.3em .8em;display:inline-block}
 .editorMenu a:hover{background-color:#333;color:#fff}
 .CodeMirror{float:left;height:640px}
-#preview{float:left;height:640px;border:0}
+#preview{float:left;height:640px;border:0} 
 .alertCover{position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.5);z-index:999;display:none}
 .alertPanel{position:absolute;top:50%;left:50%;width:30em;height:13em;background-color:#fff;margin-top:-6.5em;margin-left:-15em;border-radius:5px;box-shadow:1px 1px 3px #000}
 .alertTitle{height:1.8em;line-height:1.8em;font-size:16px;margin:.5em 1em;border-bottom:1px solid #888}

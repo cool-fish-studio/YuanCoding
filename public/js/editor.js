@@ -120,6 +120,29 @@ $(function () {
             }
         }
     });
+
+
+    //功能
+    $('#saveBtn').click(function () {
+        var data = {};
+        data.id = util.getID();
+        data.codeText = editor.getValue();
+        data.title = '测试';
+        console.log(data);
+        
+        var errorMsg = request.validator([
+            {name: '项目名称', data: data.title, regexp: null, empty: false, msg: null}
+        ]);
+        NProgress.start();
+
+        
+        return;
+        request.saveCode(data, function (error, date) {
+
+        });
+
+
+    });
 });
 
 // window.onload = function () {

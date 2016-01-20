@@ -2,10 +2,10 @@ var request = {
     validator: function (arrRegexp) {
         //arrRegexp ==> {'regexp': /123/, data: '123123123', msg: '1236263871'}
         for (var i = 0, length = arrRegexp.length; i < length; i++) {
-            if (!arrRegexp[i].empty) {
+            if (arrRegexp[i].empty && arrRegexp[i].data == '') {
                 return arrRegexp[i].name + '不能为空';
             }
-            if (arrRegexp[i].regexp.test(arrRegexp[i].data)) {
+            if (arrRegexp[i].regexp && arrRegexp[i].regexp.test(arrRegexp[i].data)) {
                 return arrRegexp[i].msg;
             }
         }
